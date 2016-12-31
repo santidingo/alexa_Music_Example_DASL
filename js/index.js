@@ -17,10 +17,12 @@ exports.handler = function(event, context, callback){
         audioEventHandlers
     );
 
-    if (event.context.System.device.supportedInterfaces.AudioPlayer === undefined) {
-        alexa.emit(':tell', 'Sorry, this skill is not supported on this device');
-    }
-    else {
-        alexa.execute();
-    }
+    alexa.execute();
+    //No clue what goes on down here, but it wasn't working.
+    // if (event.context.System.device.supportedInterfaces.AudioPlayer === undefined) {
+    //     alexa.emit(':tell', 'Sorry, this skill is not supported on this device');
+    // }
+    // else {
+    //     alexa.execute();
+    // }
 };
